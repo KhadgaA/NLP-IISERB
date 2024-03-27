@@ -1,0 +1,37 @@
+method, Model, Accuracy, f1_micro, f1_macro,other_info 
+BOW,SGDClassifier,0.6,0.6,0.5604395604395604,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l1', 'feature_selector__k': 'all', 'vect__min_df': 3, 'vect__ngram_range': (1, 3)} 
+BOW,DecisionTreeClassifier,0.7,0.7,0.6875000000000001,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 50, 'clf__max_leaf_nodes': 100, 'feature_selector__k': 'all', 'vect__min_df': 3, 'vect__ngram_range': (1, 3)} 
+BOW,RandomForestClassifier,0.75,0.75,0.7333333333333334,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__n_estimators': 100, 'feature_selector__k': 'all', 'vect__min_df': 3, 'vect__ngram_range': (1, 3)} 
+BOW,SGDClassifier,0.65,0.65,0.6266666666666667,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__loss': 'hinge', 'feature_selector__k': 'all', 'vect__min_df': 3, 'vect__ngram_range': (1, 1)} 
+BOW,MultinomialNB,0.55,0.55,0.52,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.01, 'feature_selector__k': 'all', 'vect__min_df': 2, 'vect__ngram_range': (1, 1)} 
+BOW,SGDClassifier,0.55,0.55,0.5396419437340154,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l2', 'feature_selector__k': 'all', 'vect__min_df': 2, 'vect__ngram_range': (1, 1)} 
+BOW,DecisionTreeClassifier,0.7,0.7,0.6875000000000001,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__max_leaf_nodes': 100, 'feature_selector__k': 'all', 'vect__min_df': 3, 'vect__ngram_range': (1, 2)} 
+BOW,KNeighborsClassifier,0.54,0.54,0.537037037037037,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__metric': 'cosine', 'clf__n_neighbors': 500, 'clf__weights': 'distance', 'feature_selector__k': 'all', 'vect__min_df': 3, 'vect__ngram_range': (1, 2)} 
+BOW,SGDClassifier,0.555,0.555,0.5524827152734129,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.01, 'clf__penalty': 'l2', 'feature_selector__k': 'all', 'vect__min_df': 2, 'vect__ngram_range': (1, 3)} 
+BOW,DecisionTreeClassifier,0.5,0.5,0.4694397283531409,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 50, 'clf__max_leaf_nodes': 100, 'feature_selector__k': 'all', 'vect__min_df': 3, 'vect__ngram_range': (1, 1)} 
+BOW,RandomForestClassifier,0.51,0.51,0.4773333333333333,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'entropy', 'clf__max_depth': 50, 'clf__n_estimators': 80, 'feature_selector__k': 'all', 'vect__min_df': 2, 'vect__ngram_range': (1, 3)} 
+BOW,SGDClassifier,0.52,0.52,0.5160802500252042,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.1, 'clf__loss': 'hinge', 'feature_selector__k': 'all', 'vect__min_df': 2, 'vect__ngram_range': (1, 3)} 
+BOW,MultinomialNB,0.525,0.525,0.5247029393370857,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.5623413251903491, 'feature_selector__k': 'all', 'vect__min_df': 2, 'vect__ngram_range': (1, 1)} 
+Glove,SGDClassifier,0.45,0.45,0.4486215538847118,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.01, 'clf__penalty': 'l2'} 
+Glove,DecisionTreeClassifier,0.55,0.55,0.5396419437340154,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'entropy', 'clf__max_depth': 50, 'clf__max_leaf_nodes': 100} 
+Glove,RandomForestClassifier,0.55,0.55,0.43573667711598746,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__n_estimators': 80} 
+Glove,SGDClassifier,0.35,0.35,0.25925925925925924,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.1, 'clf__loss': 'hinge'} 
+Glove,MultinomialNB,0.5,0.5,0.4791666666666667,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.0001} 
+Glove,KNeighborsClassifier,0.515,0.515,0.4866502606440687,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__metric': 'cosine', 'clf__n_neighbors': 500, 'clf__weights': 'distance'} 
+Glove,SGDClassifier,0.495,0.495,0.39591494960973717,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l1'} 
+Glove,DecisionTreeClassifier,0.535,0.535,0.5323695788812067,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__max_leaf_nodes': 100} 
+Glove,RandomForestClassifier,0.45,0.45,0.42708333333333337,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'gini', 'clf__max_depth': 50, 'clf__n_estimators': 100} 
+Glove,SGDClassifier,0.515,0.515,0.33993399339933994,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.1, 'clf__loss': 'hinge'} 
+Glove,MultinomialNB,0.495,0.495,0.4173805197427245,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.0001} 
+Glove,KNeighborsClassifier,0.515,0.515,0.4866502606440687,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__metric': 'cosine', 'clf__n_neighbors': 500, 'clf__weights': 'distance'} 
+Glove,SGDClassifier,0.485,0.485,0.3714721586575134,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l1'} 
+Glove,DecisionTreeClassifier,0.5,0.5,0.4967793880837359,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__max_leaf_nodes': 100} 
+Glove,RandomForestClassifier,0.49,0.49,0.4782608695652174,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'entropy', 'clf__max_depth': 50, 'clf__n_estimators': 80} 
+Glove,SGDClassifier,0.535,0.535,0.5053059921806431,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.01, 'clf__loss': 'hinge'} 
+Glove,MultinomialNB,0.495,0.495,0.4173805197427245,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.0001} 
+Tfidf_wp,KNeighborsClassifier,0.56425,0.56425,0.5575838672690683,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__metric': 'cosine', 'clf__n_neighbors': 1000, 'clf__weights': 'distance', 'feature_selector__k': 2000, 'vect__ngram_range': (1, 1)} 
+Tfidf_wp,KNeighborsClassifier,0.5525,0.5525,0.5391823705076717,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__metric': 'cosine', 'clf__n_neighbors': 1000, 'clf__weights': 'distance', 'feature_selector__k': 2000, 'vect__ngram_range': (1, 3)} 
+Tfidf_wp,DecisionTreeClassifier,0.58675,0.58675,0.5789332913030811,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__max_leaf_nodes': 100, 'feature_selector__k': 1000, 'vect__ngram_range': (1, 2)} 
+Tfidf_wp,RandomForestClassifier,0.60425,0.60425,0.5988285438686246,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'gini', 'clf__max_depth': 50, 'clf__n_estimators': 80, 'feature_selector__k': 2000, 'vect__ngram_range': (1, 1)} 
+Tfidf_wp,SGDClassifier,0.584,0.584,0.5703881790655116,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'feature_selector__k': 1000, 'vect__ngram_range': (1, 1)} 
+Tfidf_wp,MultinomialNB,0.549,0.549,0.5418993250125254,model:all;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.01, 'feature_selector__k': 2000, 'vect__ngram_range': (1, 1)} 

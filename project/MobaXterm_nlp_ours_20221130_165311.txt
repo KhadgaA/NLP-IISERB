@@ -1,0 +1,322 @@
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v22.1 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to tanmay@172.30.1.28                                  │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.15.0-53-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+96 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Wed Nov 30 13:26:29 2022 from 172.29.158.94
+tanmay@pragyan:~$ cd khadga_19024
+-bash: cd: khadga_19024: No such file or directory
+tanmay@pragyan:~$ cd /data/nlp
+-bash: cd: /data/nlp: No such file or directory
+tanmay@pragyan:~$ cd /DATA/NLP
+tanmay@pragyan:/DATA/NLP$ cd khadga_19024/
+tanmay@pragyan:/DATA/NLP/khadga_19024$ tail -f -n 10 results_nlpdl.txt
+^C
+tanmay@pragyan:/DATA/NLP/khadga_19024$ nvidia-smi
+Wed Nov 30 13:37:04 2022
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 510.85.02    Driver Version: 510.85.02    CUDA Version: 11.6     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  Off  | 00000000:3B:00.0 Off |                    0 |
+| N/A   35C    P0    38W / 250W |      0MiB / 40960MiB |      4%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+tanmay@pragyan:/DATA/NLP/khadga_19024$ tail -f -n 10 results_nlpdl.txt
+Loading Data
+Doing preprocess
+Total Vocabulary Size (Untrimmed): 183987
+Vocabulary Size (trimmed): 5000
+x_train.shape (808661, 200)
+Shape of label tensor: (808661, 2)
+(646928, 200) (646928, 2)
+(161733, 200) (161733, 2)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 200)]             0
+
+ token_and_position_embeddin  (None, 200, 200)         1040000
+ g (TokenAndPositionEmbeddin
+ g)
+
+ transformer_block (Transfor  (None, 200, 200)         1954064
+ merBlock)
+
+ global_average_pooling1d (G  (None, 200)              0
+ lobalAveragePooling1D)
+
+ dropout_2 (Dropout)         (None, 200)               0
+
+ dense_2 (Dense)             (None, 128)               25728
+
+ dense_3 (Dense)             (None, 2)                 258
+
+=================================================================
+Total params: 3,020,050
+Trainable params: 3,020,050
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+1559/4549 [=========>....................] - ETA: 3:06 - loss: 0.6943 - accuracy: 0.5006 - precision: 0.5006 - recall: 0.5006 - get_f1: 0.5006^C
+tanmay@pragyan:/DATA/NLP/khadga_19024$ nvidia-smi
+Wed Nov 30 13:40:15 2022
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 510.85.02    Driver Version: 510.85.02    CUDA Version: 11.6     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  Off  | 00000000:3B:00.0 Off |                    0 |
+| N/A   55C    P0   225W / 250W |  39143MiB / 40960MiB |     44%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   2375114      C   python3                         39141MiB |
++-----------------------------------------------------------------------------+
+tanmay@pragyan:/DATA/NLP/khadga_19024$ nvidia-smi
+Wed Nov 30 13:40:33 2022
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 510.85.02    Driver Version: 510.85.02    CUDA Version: 11.6     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  Off  | 00000000:3B:00.0 Off |                    0 |
+| N/A   56C    P0   232W / 250W |  39143MiB / 40960MiB |     36%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   2375114      C   python3                         39141MiB |
++-----------------------------------------------------------------------------+
+tanmay@pragyan:/DATA/NLP/khadga_19024$ tail -f -n 10 results_nlpdl.txt
+
+ dense_3 (Dense)             (None, 2)                 258
+
+=================================================================
+Total params: 3,020,050
+Trainable params: 3,020,050
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+4549/4549 [==============================] - 315s 65ms/step - loss: 0.6936 - accuracy: 0.4999 - precision: 0.4999 - recall: 0.4999 - get_f1: 0.4999 - 1 - val_accuracy: 0.4998 - val_precision: 0.4998 - val_recall: 0.4998 - val_get_f1: 0.4997
+Epoch 2/100
+ 297/4549 [>.............................] - ETA: 4:10 - loss: 0.6931 - accuracy: 0.5026 - precision: 0.5026 - recall: 0.5026 - get_f1: 0.5026^C
+tanmay@pragyan:/DATA/NLP/khadga_19024$ tail -f -n 10 results_nlpdl.txt
+Loading Data
+Doing preprocess
+Total Vocabulary Size (Untrimmed): 183987
+Vocabulary Size (trimmed): 5000
+x_train.shape (808661, 200)
+Shape of label tensor: (808661, 2)
+(646928, 200) (646928, 2)
+(161733, 200) (161733, 2)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 200)]             0
+
+ token_and_position_embeddin  (None, 200, 200)         1040000
+ g (TokenAndPositionEmbeddin
+ g)
+
+ transformer_block (Transfor  (None, 200, 200)         1954064
+ merBlock)
+
+ global_average_pooling1d (G  (None, 200)              0
+ lobalAveragePooling1D)
+
+ dropout_2 (Dropout)         (None, 200)               0
+
+ dense_2 (Dense)             (None, 128)               25728
+
+ dense_3 (Dense)             (None, 2)                 258
+
+=================================================================
+Total params: 3,020,050
+Trainable params: 3,020,050
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+4549/4549 [==============================] - 328s 67ms/step - loss: 0.6400 - accuracy: 0.6173 - precision: 0.6173 - recall: 0.6173 - get_f1: 0.6173 - val_loss: 0.6105 - val_accuracy: 0.6626 - val_precision: 0.6626 - val_recall: 0.6626 - val_get_f1: 0.6625
+Epoch 2/100
+4549/4549 [==============================] - 277s 61ms/step - loss: 0.6058 - accuracy: 0.6659 - precision: 0.6659 - recall: 0.6659 - get_f1: 0.6659 - val_loss: 0.6117 - val_accuracy: 0.6628 - val_precision: 0.6628 - val_recall: 0.6628 - val_get_f1: 0.6628
+Epoch 3/100
+4549/4549 [==============================] - 284s 62ms/step - loss: 0.5976 - accuracy: 0.6733 - precision: 0.6733 - recall: 0.6733 - get_f1: 0.6733 - val_loss: 0.6073 - val_accuracy: 0.6671 - val_precision: 0.6671 - val_recall: 0.6671 - val_get_f1: 0.6671
+Epoch 4/100
+4549/4549 [==============================] - 279s 61ms/step - loss: 0.5905 - accuracy: 0.6789 - precision: 0.6789 - recall: 0.6789 - get_f1: 0.6789 - val_loss: 0.6085 - val_accuracy: 0.6676 - val_precision: 0.6676 - val_recall: 0.6676 - val_get_f1: 0.6675
+Epoch 5/100
+4549/4549 [==============================] - 282s 62ms/step - loss: 0.5836 - accuracy: 0.6848 - precision: 0.6848 - recall: 0.6848 - get_f1: 0.6848 - val_loss: 0.6084 - val_accuracy: 0.6676 - val_precision: 0.6676 - val_recall: 0.6676 - val_get_f1: 0.6676
+Epoch 6/100
+4549/4549 [==============================] - 280s 62ms/step - loss: 0.5766 - accuracy: 0.6903 - precision: 0.6903 - recall: 0.6903 - get_f1: 0.6903 - val_loss: 0.6129 - val_accuracy: 0.6646 - val_precision: 0.6646 - val_recall: 0.6646 - val_get_f1: 0.6646
+Epoch 6: early stopping
+316/316 [==============================] - 20s 62ms/step - loss: 0.6116 - accuracy: 0.6646 - precision: 0.6646 - recall: 0.6646 - get_f1: 0.6646
+Valid set Transformer MODEL
+  Loss: 0.612
+  Accuracy: 0.665
+1580/1580 [==============================] - 88s 54ms/step
+[0 1 0 0 1 0 1 1 1 1]
+----- END ----
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ embedding_2 (Embedding)     (None, 200, 200)          1000000
+
+ flatten (Flatten)           (None, 40000)             0
+
+ dense_4 (Dense)             (None, 64)                2560064
+
+ dense_5 (Dense)             (None, 64)                4160
+
+ dense_6 (Dense)             (None, 64)                4160
+
+ dense_7 (Dense)             (None, 2)                 130
+
+=================================================================
+Total params: 3,568,514
+Trainable params: 3,568,514
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+4549/4549 [==============================] - 139s 29ms/step - loss: 0.6170 - Accuracy: 0.6540 - precision: 0.6540 - recall: 0.6540 - get_f1: 0.6540 - val_loss: 0.6101 - val_Accuracy: 0.6633 - val_precision: 0.6633 - val_recall: 0.6633 - val_get_f1: 0.6634
+Epoch 2/100
+4549/4549 [==============================] - 130s 29ms/step - loss: 0.5898 - Accuracy: 0.6808 - precision: 0.6808 - recall: 0.6808 - get_f1: 0.6807 - val_loss: 0.6151 - val_Accuracy: 0.6608 - val_precision: 0.6608 - val_recall: 0.6608 - val_get_f1: 0.6608
+Epoch 3/100
+4549/4549 [==============================] - 129s 28ms/step - loss: 0.5478 - Accuracy: 0.7110 - precision: 0.7110 - recall: 0.7110 - get_f1: 0.7109 - val_loss: 0.6426 - val_Accuracy: 0.6505 - val_precision: 0.6505 - val_recall: 0.6505 - val_get_f1: 0.6505
+Epoch 4/100
+4549/4549 [==============================] - 133s 29ms/step - loss: 0.5002 - Accuracy: 0.7387 - precision: 0.7387 - recall: 0.7387 - get_f1: 0.7387 - val_loss: 0.7150 - val_Accuracy: 0.6392 - val_precision: 0.6392 - val_recall: 0.6392 - val_get_f1: 0.6393
+Epoch 5/100
+4549/4549 [==============================] - 132s 29ms/step - loss: 0.4571 - Accuracy: 0.7633 - precision: 0.7633 - recall: 0.7633 - get_f1: 0.7633 - val_loss: 0.8035 - val_Accuracy: 0.6350 - val_precision: 0.6350 - val_recall: 0.6350 - val_get_f1: 0.6350
+Epoch 6/100
+4549/4549 [==============================] - 134s 29ms/step - loss: 0.4158 - Accuracy: 0.7873 - precision: 0.7873 - recall: 0.7873 - get_f1: 0.7873 - val_loss: 0.9231 - val_Accuracy: 0.6258 - val_precision: 0.6258 - val_recall: 0.6258 - val_get_f1: 0.6258
+Epoch 6: early stopping
+316/316 [==============================] - 6s 20ms/step - loss: 0.9280 - Accuracy: 0.6271 - precision: 0.6271 - recall: 0.6271 - get_f1: 0.6272
+Valid set FFNN MODEL
+  Loss: 0.928
+  Accuracy: 0.627
+1580/1580 [==============================] - 20s 12ms/step
+----- END ----
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ embedding_3 (Embedding)     (None, 200, 200)          1000000
+
+ lstm (LSTM)                 (None, 200, 128)          168448
+
+ lstm_1 (LSTM)               (None, 200, 128)          131584
+
+ lstm_2 (LSTM)               (None, 200, 64)           49408
+
+ lstm_3 (LSTM)               (None, 32)                12416
+
+ dense_8 (Dense)             (None, 2)                 66
+
+=================================================================
+Total params: 1,361,922
+Trainable params: 1,361,922
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+4549/4549 [==============================] - 611s 125ms/step - loss: 0.6140 - Accuracy: 0.6559 - precision: 0.6559 - recall: 0.6559 - get_f1: 0.6559 - val_loss: 0.6026 - val_Accuracy: 0.6691 - val_precision: 0.6691 - val_recall: 0.6691 - val_get_f1: 0.6692
+Epoch 2/100
+4549/4549 [==============================] - 557s 122ms/step - loss: 0.5913 - Accuracy: 0.6795 - precision: 0.6795 - recall: 0.6795 - get_f1: 0.6795 - val_loss: 0.6004 - val_Accuracy: 0.6704 - val_precision: 0.6704 - val_recall: 0.6704 - val_get_f1: 0.6705
+Epoch 3/100
+4549/4549 [==============================] - 559s 123ms/step - loss: 0.5764 - Accuracy: 0.6914 - precision: 0.6914 - recall: 0.6914 - get_f1: 0.6914 - val_loss: 0.6026 - val_Accuracy: 0.6689 - val_precision: 0.6689 - val_recall: 0.6689 - val_get_f1: 0.6690
+Epoch 4/100
+4549/4549 [==============================] - 562s 124ms/step - loss: 0.5598 - Accuracy: 0.7054 - precision: 0.7054 - recall: 0.7054 - get_f1: 0.7054 - val_loss: 0.6086 - val_Accuracy: 0.6694 - val_precision: 0.6694 - val_recall: 0.6694 - val_get_f1: 0.6694
+Epoch 5/100
+4549/4549 [==============================] - 558s 123ms/step - loss: 0.5378 - Accuracy: 0.7226 - precision: 0.7226 - recall: 0.7226 - get_f1: 0.7226 - val_loss: 0.6267 - val_Accuracy: 0.6623 - val_precision: 0.6623 - val_recall: 0.6623 - val_get_f1: 0.6624
+Epoch 6/100
+4549/4549 [==============================] - 559s 123ms/step - loss: 0.5102 - Accuracy: 0.7420 - precision: 0.7420 - recall: 0.7420 - get_f1: 0.7420 - val_loss: 0.6464 - val_Accuracy: 0.6580 - val_precision: 0.6580 - val_recall: 0.6580 - val_get_f1: 0.6581
+Epoch 7/100
+4549/4549 [==============================] - 562s 124ms/step - loss: 0.4756 - Accuracy: 0.7649 - precision: 0.7649 - recall: 0.7649 - get_f1: 0.7649 - val_loss: 0.6953 - val_Accuracy: 0.6506 - val_precision: 0.6506 - val_recall: 0.6506 - val_get_f1: 0.6507
+Epoch 7: early stopping
+158/158 [==============================] - 9s 58ms/step - loss: 0.6887 - Accuracy: 0.6543 - precision: 0.6543 - recall: 0.6543 - get_f1: 0.6543
+Valid set LSTM MODEL
+  Loss: 0.689
+  Accuracy: 0.654
+790/790 [==============================] - 49s 54ms/step
+----- END ----
+Model: "sequential_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ embedding_4 (Embedding)     (None, 200, 200)          1000000
+
+ simple_rnn (SimpleRNN)      (None, 200, 100)          30100
+
+ simple_rnn_1 (SimpleRNN)    (None, 200, 100)          20100
+
+ simple_rnn_2 (SimpleRNN)    (None, 200, 64)           10560
+
+ simple_rnn_3 (SimpleRNN)    (None, 64)                8256
+
+ dense_9 (Dense)             (None, 2)                 130
+
+=================================================================
+Total params: 1,069,146
+Trainable params: 1,069,146
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+2275/2275 [==============================] - 1492s 525ms/step - loss: 0.6275 - Accuracy: 0.6409 - precision: 0.6409 - recall: 0.6409 - get_f1: 0.6409 - val_loss: 0.6143 - val_Accuracy: 0.6593 - val_precision: 0.6593 - val_recall: 0.6593 - val_get_f1: 0.6593
+Epoch 2/100
+2275/2275 [==============================] - 1115s 490ms/step - loss: 0.6132 - Accuracy: 0.6604 - precision: 0.6604 - recall: 0.6604 - get_f1: 0.6604 - val_loss: 0.6157 - val_Accuracy: 0.6563 - val_precision: 0.6563 - val_recall: 0.6563 - val_get_f1: 0.6563
+Epoch 3/100
+ 123/2275 [>.............................] - ETA: 16:57 - loss: 0.6084 - Accuracy: 0.6632 - precision: 0.6632 - recall: 0.6632 - get_f1: 0.6632
+Network error: Software caused connection abort
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file

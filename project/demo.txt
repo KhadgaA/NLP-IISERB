@@ -1,0 +1,11 @@
+method, Model, Accuracy, f1_micro, f1_macro,other_info 
+test,SGDClassifier,0.55,0.55,0.5492788461538463,model:lr;Gridsearch:False;cv:5;fs:chi2;best_param:{'feature_selector__k': 1000, 'vect__min_df': 2, 'vect__ngram_range': (1, 1)} 
+test,SGDClassifier,0.515,0.515,0.33993399339933994,model:lr;Gridsearch:False;cv:5;fs:chi2;best_param:{} 
+test,SGDClassifier,0.499,0.499,0.3328885923949299,model:lr;Gridsearch:False;cv:5;fs:chi2;best_param:{} 
+test,SGDClassifier,0.499,0.499,0.3328885923949299,model:lr;Gridsearch:False;cv:5;fs:chi2;best_param:{} 
+test,SGDClassifier,0.59,0.59,0.5846014808450624,model:lr;Gridsearch:False;cv:5;fs:chi2;best_param:{} 
+test,SGDClassifier,0.582,0.582,0.5810745937776549,model:lr;Gridsearch:False;cv:5;fs:chi2;best_param:{'feature_selector__k': 1000, 'vect__min_df': 2, 'vect__ngram_range': (1, 2)} 
+test,SGDClassifier,0.59,0.59,0.5878034043417371,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l2', 'feature_selector__k': 1000, 'vect__min_df': 2, 'vect__ngram_range': (1, 2)} 
+test,SGDClassifier,0.594,0.594,0.5709043560606061,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l1'} 
+test,SGDClassifier,0.528,0.528,0.4428173609610928,model:lr;Gridsearch:False;cv:5;fs:chi2;best_param:{} 
+test,SGDClassifier,0.5715,0.5715,0.5687051012322604,model:lr;Gridsearch:False;cv:5;fs:chi2;best_param:{'feature_selector__k': 1000, 'vect__min_df': 2, 'vect__ngram_range': (1, 3)} 

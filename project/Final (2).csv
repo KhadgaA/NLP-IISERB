@@ -1,0 +1,28 @@
+method, Model, Accuracy, f1_micro, f1_macro,other_info 
+BoW,SGDClassifier,0.6557783507385629,0.6557783507385629,0.6546945275534537,model:lr;Gridsearch:False;cv:5;fs:None;best_param:{} 
+BoW,SGDClassifier,0.6503681994398175,0.6503681994398175,0.6467143137907045,model:svm;Gridsearch:False;cv:5;fs:None;best_param:{} 
+BoW,MultinomialNB,0.6416810422115462,0.6416810422115462,0.6416804089980122,model:mnb;Gridsearch:False;cv:5;fs:None;best_param:{} 
+BoW,DecisionTreeClassifier,0.5804814107201375,0.5804814107201375,0.5803727144176025,model:dtree;Gridsearch:False;cv:5;fs:None;best_param:{} 
+W2V_b300,SGDClassifier,0.5130183697822955,0.5130183697822955,0.4032853002815731,model:lr;Gridsearch:False;cv:5;fs:None;best_param:{} 
+W2V_b300,SGDClassifier,0.5126844861592872,0.5126844861592872,0.3992531638567722,model:svm;Gridsearch:False;cv:5;fs:None;best_param:{} 
+W2V_Glove,SGDClassifier,0.5156770727062504,0.5156770727062504,0.4784046832844171,model:lr;Gridsearch:False;cv:5;fs:None;best_param:{} 
+W2V_Glove,SGDClassifier,0.5187747707641607,0.5187747707641607,0.4919442500439959,model:svm;Gridsearch:False;cv:5;fs:None;best_param:{} 
+W2V_Glove,SGDClassifier,0.5259594516888947,0.5259594516888947,0.5258559981680608,model:lr;Gridsearch:True;cv:5;fs:None;best_param:{'clf__penalty': 'l1'} 
+W2V_Glove,SGDClassifier,0.5039911459009602,0.5039911459009602,0.3488729724771954,model:svm;Gridsearch:True;cv:5;fs:None;best_param:{} 
+BoW-11,SGDClassifier,0.5001329351461977,0.5001329351461977,0.3979214273516089,model:lr;Gridsearch:False;cv:5;fs:None;best_param:{} 
+BoW-11,SGDClassifier,0.4985315303617691,0.4985315303617691,0.3745371799713204,model:svm;Gridsearch:False;cv:5;fs:None;best_param:{} 
+BoW-22,SGDClassifier,0.521829187611681,0.521829187611681,0.5214822294528161,model:lr;Gridsearch:False;cv:5;fs:None;best_param:{} 
+BoW-22,SGDClassifier,0.5194858192205672,0.5194858192205672,0.49084328867572313,model:svm;Gridsearch:False;cv:5;fs:None;best_param:{} 
+BoW,SGDClassifier,0.6563224573834654,0.6563224573834654,0.6549459880552738,model:lr;Gridsearch:True;cv:5;fs:None;best_param:{'clf__penalty': 'l2'} 
+BoW,SGDClassifier,0.6495396734123524,0.6495396734123524,0.645567342391288,model:svm;Gridsearch:True;cv:5;fs:None;best_param:{'clf__loss': 'hinge'} 
+BoW,SGDClassifier,0.6436719778894845,0.6436719778894845,0.6414657455334053,model:lr;Gridsearch:True;cv:5;fs:None;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l2'} 
+BoW,SGDClassifier,0.6310091323353922,0.6310091323353922,0.618238252209621,model:svm;Gridsearch:True;cv:5;fs:None;best_param:{'clf__alpha': 0.001, 'clf__loss': 'hinge'} 
+BoW-11,SGDClassifier,0.6393438568504881,0.6393438568504881,0.6367077184773285,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l2', 'fsp__k': 10000} 
+BoW-11,SGDClassifier,0.6265264355450032,0.6265264355450032,0.6113675967643812,model:svm;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__loss': 'hinge', 'fsp__k': 10000} 
+BoW-11,MultinomialNB,0.6406917574026327,0.6406917574026327,0.6406588805481781,model:mnb;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.5623413251903491, 'fsp__k': 10000} 
+BoW-22,SGDClassifier,0.5215014870187284,0.5215014870187284,0.511600223638374,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l2', 'fsp__k': 10000} 
+BoW-22,SGDClassifier,0.5242343863033518,0.5242343863033518,0.5229726056407165,model:svm;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__loss': 'squared_hinge', 'fsp__k': 10000} 
+BoW-11,SGDClassifier,0.4996197436515739,0.4996197436515739,0.3464709955239029,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l2', 'fsp__k': 10000} 
+BoW-11,SGDClassifier,0.5000340066653064,0.5000340066653064,0.33503388112925486,model:svm;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.01, 'clf__loss': 'hinge', 'fsp__k': 10000} 
+BoW-11,MultinomialNB,0.5024824865673672,0.5024824865673672,0.489962080868743,model:mnb;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 31.622776601683793, 'fsp__k': 10000} 
+BoW-11,DecisionTreeClassifier,0.5000092745450836,0.5000092745450836,0.337565909815328,model:dtree;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__max_leaf_nodes': 100, 'fsp__k': 10000} 

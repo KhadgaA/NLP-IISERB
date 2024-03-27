@@ -1,0 +1,26 @@
+method, Model, Accuracy, f1_micro, f1_macro,other_info 
+BoW,SGDClassifier,0.6481361255897065,0.6481361255897065,0.6447686092918392,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__penalty': 'l2', 'fsp__k': 10000} 
+BoW,SGDClassifier,0.6416501270612677,0.6416501270612677,0.6333221208668403,model:svm;Gridsearch:True;cv:5;fs:chi2;best_param:{'fsp__k': 10000} 
+tfidf,SGDClassifier,0.6263656767635547,0.6263656767635547,0.6245282402512717,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__penalty': 'l2', 'fsp__k': 10000} 
+tfidf,SGDClassifier,0.636561493325419,0.636561493325419,0.6351195807796851,model:svm;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'clf__loss': 'squared_hinge', 'fsp__k': 10000} 
+tfidf,MultinomialNB,0.6421262203755572,0.6421262203755572,0.6414948942542402,model:mnb;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 31.622776601683793, 'fsp__k': 10000} 
+tfidf,RandomForestClassifier,0.633247389215559,0.633247389215559,0.6284016136327709,model:rf;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__n_estimators': 100, 'fsp__k': 10000} 
+tfidf,KNeighborsClassifier,0.6046694242980715,0.6046694242980715,0.5840022981467704,model:knn;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__metric': 'cosine', 'clf__n_neighbors': 500, 'clf__weights': 'distance', 'fsp__k': 10000} 
+spacyd2v,DecisionTreeClassifier,0.5628535920313109,0.5628535920313109,0.5628505019521128,model:dtree;Gridsearch:True;cv:5;fs:None;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 50, 'clf__max_leaf_nodes': 100} 
+spacyd2v,DecisionTreeClassifier,0.5628535920313109,0.5628535920313109,0.5628505019521128,model:lr;Gridsearch:True;cv:5;fs:None;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 50, 'clf__max_leaf_nodes': 100} 
+spacyd2v,SGDClassifier,0.6008606777837547,0.6008606777837547,0.6003851706528657,model:lr;Gridsearch:True;cv:5;fs:None;best_param:{'clf__alpha': 0.01, 'clf__penalty': 'l2'} 
+spacyd2v,SGDClassifier,0.5962790525124743,0.5962790525124743,0.5954512610163356,model:svm;Gridsearch:True;cv:5;fs:None;best_param:{'clf__alpha': 0.1} 
+---------------------------------------comments-----------------------------------
+BoW,SGDClassifier,0.6727654969856237,0.6727654969856237,0.6708193683911841,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.0001, 'clf__penalty': 'l2', 'fsp__k': 10000} 
+BoW,SGDClassifier,0.6354985314577214,0.6354985314577214,0.6169544362467051,model:svm;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'fsp__k': 10000} 
+BoW,MultinomialNB,0.6758757149482145,0.6758757149482145,0.6749131936043515,model:mnb;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.1, 'fsp__k': 10000} 
+BoW,DecisionTreeClassifier,0.6216107590044829,0.6216107590044829,0.6110978551304601,model:dtree;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__max_leaf_nodes': 100, 'fsp__k': 10000} 
+BoW,RandomForestClassifier,0.6501654042355851,0.6501654042355851,0.6405731240668238,model:rf;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__n_estimators': 80, 'fsp__k': 10000} 
+tfidf,SGDClassifier,0.663731643221518,0.663731643221518,0.6614474676591307,model:lr;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.0001, 'clf__penalty': 'l2', 'fsp__k': 10000} 
+tfidf,SGDClassifier,0.6143267893028289,0.6143267893028289,0.5844682787833143,model:svm;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.001, 'fsp__k': 10000} 
+tfidf,MultinomialNB,0.6765311485546452,0.6765311485546452,0.6746164304081854,model:mnb;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__alpha': 0.1, 'fsp__k': 10000} 
+tfidf,DecisionTreeClassifier,0.6239975266656361,0.6239975266656361,0.6137964778069043,model:dtree;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__max_leaf_nodes': 100, 'fsp__k': 10000} 
+tfidf,RandomForestClassifier,0.6514020714175297,0.6514020714175297,0.6417871105857704,model:rf;Gridsearch:True;cv:5;fs:chi2;best_param:{'clf__bootstrap': True, 'clf__criterion': 'gini', 'clf__max_depth': 100, 'clf__n_estimators': 80, 'fsp__k': 10000} 
+spacyd2v,SGDClassifier,0.621116092131705,0.621116092131705,0.620861601677184,model:svm;Gridsearch:True;cv:5;fs:None;best_param:{'clf__alpha': 0.01} 
+spacyd2v,DecisionTreeClassifier,0.5782779409491421,0.5782779409491421,0.5767179517697589,model:dtree;Gridsearch:True;cv:5;fs:None;best_param:{'clf__criterion': 'entropy', 'clf__max_depth': 50, 'clf__max_leaf_nodes': 100} 
+spacyd2v,SGDClassifier,0.6139743391559747,0.6139743391559747,0.6128443978115022,model:lr;Gridsearch:True;cv:5;fs:None;best_param:{'clf__alpha': 0.01, 'clf__penalty': 'l2'} 
